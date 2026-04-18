@@ -26,3 +26,11 @@ Click the "Download PDF" button in the toolbar, or use your browser's print dial
 ## Brand
 
 SMART/EDGE. Where Great Design Clicks.
+
+## License
+
+Creator Style Guide © 2026 by SMART/EDGE is licensed under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/).
+
+You're welcome to view and share this work with attribution. Commercial use, modification, or redistribution of modified versions is not permitted without explicit written permission.
+
+For licensing inquiries, contact: hello@smartedgedm.com
