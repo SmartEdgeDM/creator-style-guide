@@ -1,0 +1,841 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Creator Style & Formatting Guide — SMART/EDGE</title>
+<meta name="viewport" content="width=1020"/>
+<link rel="icon" href="assets/favicon-3d.webp"/>
+<link rel="stylesheet" href="styles/brand.css"/>
+<link rel="stylesheet" href="styles/guide.css"/>
+</head>
+<body>
+
+<!-- Design rationale (only visible to me and teammates; remove in final if desired)
+  APPROACH
+  • 16 pages, US Letter portrait (8.5×11), print-safe with @page size letter
+  • Cover is full-bleed black with oversized Barlow Condensed wordmark and a lime /-slash
+  • 3 dark "section marker" pages act as visual punctuation between content blocks (Brand-guideline tradition: a single lime-on-black section is the brand's rhythm tool)
+  • Mixed infographic library: Do/Don't duals, numbered steps, stat blocks, callouts, checklists, annotated post mockups, pull quotes, platform matrix, hierarchy diagram, icon grids, type + color specimens
+  • Strict palette: cream, almost-black, azure, lime (scarcity), purple (ornament). Lime is used on CTAs and the hero moments only
+  • Reader shell shows pages stacked; toolbar lets user print to PDF
+  • Placeholder text is in-world; user will replace with their own copy
+-->
+
+<div class="toolbar">
+  <span class="counter" id="counter">16 pages</span>
+  <button onclick="window.print()" class="primary">Download PDF</button>
+  <button onclick="document.getElementById('tweaks').classList.toggle('open')">Tweaks</button>
+</div>
+
+<!-- TWEAKS -->
+<div class="tweaks-panel" id="tweaks">
+  <h4>Tweaks</h4>
+  <div class="row">
+    <label>Accent intensity</label>
+    <select id="tw-accent" onchange="applyTweaks()">
+      <option value="strict">Strict (lime on CTAs only)</option>
+      <option value="flex" selected>Flexible (lime for highlights)</option>
+      <option value="heavy">Heavy (lime everywhere)</option>
+    </select>
+  </div>
+  <div class="row">
+    <label>Cover style</label>
+    <select id="tw-cover" onchange="applyTweaks()">
+      <option value="a" selected>A — Dark wordmark</option>
+      <option value="b">B — Lime splash</option>
+      <option value="c">C — Cream editorial</option>
+    </select>
+  </div>
+</div>
+
+<main class="reader" id="reader">
+
+<!-- =========================== PAGE 1 — COVER =========================== -->
+<section class="page cover" data-page="1" data-screen-label="01 Cover">
+  <div class="page-header">
+    <div class="mark"><span>SMART</span><span class="slash">/</span><span>EDGE</span></div>
+    <span>Vol. 01 · 2026 Edition</span>
+  </div>
+  <div class="cover-body">
+    <div class="cover-deco"><span>Creator<br/>Guide</span></div>
+    <div>
+      <div class="cover-kicker">A Field Guide For Content Creators</div>
+      <h1 class="cover-title">STYLE<br/><span class="slash">/</span>FORMAT</h1>
+      <p class="cover-sub">Everything you need to sharpen your posts, captions and visual identity. Engineered to convert — no fluff.</p>
+    </div>
+    <div class="cover-meta">
+      <div class="block"><span class="label">Volume</span><span class="value">001.2026</span></div>
+      <div class="block"><span class="label">Pages</span><span class="value">16</span></div>
+      <div class="block"><span class="label">Audience</span><span class="value">CREATORS</span></div>
+      <div class="block"><span class="label">Publisher</span><span class="value">SMART/EDGE</span></div>
+    </div>
+  </div>
+  <div class="page-footer">
+    <span>smartedge.studio</span>
+    <span class="num">01</span>
+  </div>
+</section>
+
+<!-- =========================== PAGE 2 — WELCOME / LEDE =========================== -->
+<section class="page" data-page="2" data-screen-label="02 Welcome">
+  <div class="page-header">
+    <div class="mark"><span>SMART</span><span class="slash">/</span><span>EDGE</span></div>
+    <span>Welcome</span>
+  </div>
+  <div class="page-body">
+    <div class="eyebrow-lg">Start here</div>
+    <hr class="lime-rule"/>
+    <div class="title-block">
+      <h1>Where great design clicks.</h1>
+      <p class="lede">This guide is a toolkit, not a lecture. Inside you'll find the style rules, formatting templates, and small-but-mighty habits that turn scroll-by content into work that actually converts. Read it front-to-back the first time. Bookmark it forever after.</p>
+    </div>
+
+    <div class="icon-grid">
+      <div class="icon-tile">
+        <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+        <h4>Voice</h4>
+        <p>Pick a tone. Stick to it. Your voice is the thing readers remember.</p>
+      </div>
+      <div class="icon-tile">
+        <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+        <h4>Layout</h4>
+        <p>Hook → body → CTA. One job per post. White space is not wasted space.</p>
+      </div>
+      <div class="icon-tile">
+        <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></svg></div>
+        <h4>Personality</h4>
+        <p>Consistent is more important than perfect. Show up the same way every time.</p>
+      </div>
+    </div>
+
+    <div class="takeaway">
+      <div class="bolt">⚡</div>
+      <div>
+        <div class="label">Key Takeaway</div>
+        <p>Formatting is not decoration — it's the difference between a post being seen and a post being felt.</p>
+      </div>
+    </div>
+  </div>
+  <div class="page-footer">
+    <span>Creator Style & Formatting Guide</span>
+    <span class="num">02</span>
+  </div>
+</section>
+
+<!-- =========================== PAGE 3 — TOC =========================== -->
+<section class="page" data-page="3" data-screen-label="03 TOC">
+  <div class="page-header">
+    <div class="mark"><span>SMART</span><span class="slash">/</span><span>EDGE</span></div>
+    <span>Table of Contents</span>
+  </div>
+  <div class="page-body">
+    <div class="eyebrow-lg">Inside this guide</div>
+    <hr class="lime-rule"/>
+    <div class="title-block">
+      <h1>What you'll learn.</h1>
+    </div>
+
+    <div class="toc">
+      <div class="toc-row">
+        <span class="n">01</span>
+        <div><div class="t">Finding your voice</div><div class="d">Tone, cadence, and casing rules</div></div>
+        <span class="p">P. 05</span>
+      </div>
+      <div class="toc-row highlight">
+        <span class="n">02</span>
+        <div><div class="t">The anatomy of a great post</div><div class="d">Hook, body, CTA — in that order</div></div>
+        <span class="p">P. 06</span>
+      </div>
+      <div class="toc-row">
+        <span class="n">03</span>
+        <div><div class="t">Do's & don'ts of captions</div><div class="d">What to keep, what to cut</div></div>
+        <span class="p">P. 07</span>
+      </div>
+      <div class="toc-row">
+        <span class="n">04</span>
+        <div><div class="t">Visual identity at a glance</div><div class="d">Colors, type, and the things that stay the same</div></div>
+        <span class="p">P. 09</span>
+      </div>
+      <div class="toc-row">
+        <span class="n">05</span>
+        <div><div class="t">Formatting for every platform</div><div class="d">Specs, dimensions, and character limits</div></div>
+        <span class="p">P. 11</span>
+      </div>
+      <div class="toc-row">
+        <span class="n">06</span>
+        <div><div class="t">Annotated post teardown</div><div class="d">A real example, broken down piece-by-piece</div></div>
+        <span class="p">P. 12</span>
+      </div>
+      <div class="toc-row">
+        <span class="n">07</span>
+        <div><div class="t">The publishing checklist</div><div class="d">7 things to check before you hit post</div></div>
+        <span class="p">P. 14</span>
+      </div>
+      <div class="toc-row">
+        <span class="n">08</span>
+        <div><div class="t">Keep going</div><div class="d">Resources, templates, and next steps</div></div>
+        <span class="p">P. 15</span>
+      </div>
+    </div>
+  </div>
+  <div class="page-footer">
+    <span>Creator Style & Formatting Guide</span>
+    <span class="num">03</span>
+  </div>
+</section>
+
+<!-- =========================== PAGE 4 — SECTION DIVIDER 01 =========================== -->
+<section class="page dark" data-page="4" data-screen-label="04 Section 01">
+  <div class="page-header">
+    <div class="mark"><span>SMART</span><span class="slash">/</span><span>EDGE</span></div>
+    <span>Part One</span>
+  </div>
+  <div class="page-body">
+    <div class="section-marker">
+      <div class="num">01</div>
+      <div>
+        <div class="eyebrow-lg">Part One</div>
+        <h1>Finding your voice.</h1>
+        <p class="desc">Before you worry about aesthetics, lock down how you sound. Voice is what makes a follower feel like they know you.</p>
+      </div>
+    </div>
+  </div>
+  <div class="page-footer">
+    <span>Part 01 · Finding your voice</span>
+    <span class="num">04</span>
+  </div>
+</section>
+
+<!-- =========================== PAGE 5 — VOICE RULES =========================== -->
+<section class="page" data-page="5" data-screen-label="05 Voice">
+  <div class="page-header">
+    <div class="mark"><span>SMART</span><span class="slash">/</span><span>EDGE</span></div>
+    <span>01 · Voice</span>
+  </div>
+  <div class="page-body">
+    <div class="eyebrow-lg">Rule 01 · Voice</div>
+    <hr class="lime-rule"/>
+    <div class="title-block">
+      <h1>Sound like a person, not a press release.</h1>
+      <p class="lede">Confident, plain-spoken, outcome-focused. Name the result first — then defend it with a proof point. No hedging. No filler adverbs.</p>
+    </div>
+
+    <div class="two-col">
+      <div>
+        <h3 style="font-size:16px;color:var(--se-azure);text-transform:uppercase;letter-spacing:0.12em;margin-bottom:10px;">Words to use</h3>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;">
+          <span style="padding:6px 12px;background:var(--se-lime);color:var(--se-black);border-radius:999px;font-family:var(--font-display);font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:0.08em;">sharpen</span>
+          <span style="padding:6px 12px;background:var(--se-lime);color:var(--se-black);border-radius:999px;font-family:var(--font-display);font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:0.08em;">click</span>
+          <span style="padding:6px 12px;background:var(--se-lime);color:var(--se-black);border-radius:999px;font-family:var(--font-display);font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:0.08em;">edge</span>
+          <span style="padding:6px 12px;background:var(--se-lime);color:var(--se-black);border-radius:999px;font-family:var(--font-display);font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:0.08em;">measurable</span>
+          <span style="padding:6px 12px;background:var(--se-lime);color:var(--se-black);border-radius:999px;font-family:var(--font-display);font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:0.08em;">engineered</span>
+          <span style="padding:6px 12px;background:var(--se-lime);color:var(--se-black);border-radius:999px;font-family:var(--font-display);font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:0.08em;">launch</span>
+          <span style="padding:6px 12px;background:var(--se-lime);color:var(--se-black);border-radius:999px;font-family:var(--font-display);font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:0.08em;">ship</span>
+          <span style="padding:6px 12px;background:var(--se-lime);color:var(--se-black);border-radius:999px;font-family:var(--font-display);font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:0.08em;">convert</span>
+        </div>
+      </div>
+      <div>
+        <h3 style="font-size:16px;color:var(--danger);text-transform:uppercase;letter-spacing:0.12em;margin-bottom:10px;">Words to avoid</h3>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;">
+          <span style="padding:6px 12px;background:#FBECEB;color:var(--danger);border:1px solid #E8B9B5;border-radius:999px;font-family:var(--font-display);font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:0.08em;text-decoration:line-through;">synergy</span>
+          <span style="padding:6px 12px;background:#FBECEB;color:var(--danger);border:1px solid #E8B9B5;border-radius:999px;font-family:var(--font-display);font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:0.08em;text-decoration:line-through;">unlock potential</span>
+          <span style="padding:6px 12px;background:#FBECEB;color:var(--danger);border:1px solid #E8B9B5;border-radius:999px;font-family:var(--font-display);font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:0.08em;text-decoration:line-through;">journey</span>
+          <span style="padding:6px 12px;background:#FBECEB;color:var(--danger);border:1px solid #E8B9B5;border-radius:999px;font-family:var(--font-display);font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:0.08em;text-decoration:line-through;">reimagine</span>
+          <span style="padding:6px 12px;background:#FBECEB;color:var(--danger);border:1px solid #E8B9B5;border-radius:999px;font-family:var(--font-display);font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:0.08em;text-decoration:line-through;">solutions</span>
+          <span style="padding:6px 12px;background:#FBECEB;color:var(--danger);border:1px solid #E8B9B5;border-radius:999px;font-family:var(--font-display);font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:0.08em;text-decoration:line-through;">game-changer</span>
+          <span style="padding:6px 12px;background:#FBECEB;color:var(--danger);border:1px solid #E8B9B5;border-radius:999px;font-family:var(--font-display);font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:0.08em;text-decoration:line-through;">leverage</span>
+          <span style="padding:6px 12px;background:#FBECEB;color:var(--danger);border:1px solid #E8B9B5;border-radius:999px;font-family:var(--font-display);font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:0.08em;text-decoration:line-through;">thought leader</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="pull">
+      <q>Short. Declarative. The occasional fragment for emphasis — the way a good ad runs.</q>
+      <cite>— The house voice, summarized</cite>
+    </div>
+
+    <div class="callout note" style="margin-top:auto;">
+      <div class="icon">i</div>
+      <div>
+        <span class="label">Casing rule</span>
+        <p>Headlines in Sentence case or Title Case. Eyebrows and button labels in ALL CAPS with wide tracking. Body copy always sentence case.</p>
+      </div>
+    </div>
+  </div>
+  <div class="page-footer">
+    <span>Part 01 · Finding your voice</span>
+    <span class="num">05</span>
+  </div>
+</section>
+
+<!-- =========================== PAGE 6 — ANATOMY OF A POST =========================== -->
+<section class="page" data-page="6" data-screen-label="06 Anatomy">
+  <div class="page-header">
+    <div class="mark"><span>SMART</span><span class="slash">/</span><span>EDGE</span></div>
+    <span>02 · Anatomy</span>
+  </div>
+  <div class="page-body">
+    <div class="eyebrow-lg">Rule 02 · Structure</div>
+    <hr class="lime-rule"/>
+    <div class="title-block">
+      <h1>Every post has three jobs.</h1>
+      <p class="lede">Hook stops the scroll. Body earns the time. CTA banks the action. Skip any one and the post leaks.</p>
+    </div>
+
+    <div class="hierarchy">
+      <div>
+        <div class="lvl">01 · HOOK — FIRST 7 WORDS</div>
+        <div class="h-hook">Stop scrolling. Read this if you ship content weekly.</div>
+      </div>
+      <div>
+        <div class="lvl">02 · BODY — THE PROMISE & PROOF</div>
+        <div class="h-body">One idea per post. Deliver it in 2–4 short paragraphs or a tight numbered list.</div>
+        <p class="h-detail" style="margin-top:8px;">Support with one proof point — a stat, a result, a screenshot. The body's job is not to teach everything you know. It's to make the CTA feel inevitable.</p>
+      </div>
+      <div>
+        <div class="lvl">03 · CTA — THE ASK</div>
+        <a class="h-cta">Start a project →</a>
+      </div>
+    </div>
+
+    <div class="callout tip">
+      <div class="icon">⚡</div>
+      <div>
+        <span class="label">Pro tip</span>
+        <p>If you can delete a sentence without losing meaning, delete it. If you can't decide which sentence to delete, delete the first one.</p>
+      </div>
+    </div>
+  </div>
+  <div class="page-footer">
+    <span>Part 01 · Finding your voice</span>
+    <span class="num">06</span>
+  </div>
+</section>
+
+<!-- =========================== PAGE 7 — DO / DON'T CAPTIONS =========================== -->
+<section class="page" data-page="7" data-screen-label="07 Do Don't">
+  <div class="page-header">
+    <div class="mark"><span>SMART</span><span class="slash">/</span><span>EDGE</span></div>
+    <span>03 · Captions</span>
+  </div>
+  <div class="page-body">
+    <div class="eyebrow-lg">Rule 03 · Captions</div>
+    <hr class="lime-rule"/>
+    <div class="title-block">
+      <h1>Do this. Not that.</h1>
+      <p class="lede">A caption is not a description of the image. It's the reason to care about the image.</p>
+    </div>
+
+    <div class="dodont">
+      <div class="card do">
+        <div class="tag"><span class="badge">✓</span> DO</div>
+        <h3>Lead with the outcome.</h3>
+        <p>The first line is a headline. Write it like one — promise a specific result, not a category.</p>
+        <div class="example">Turn Monday meetings into Friday launches.</div>
+      </div>
+      <div class="card dont">
+        <div class="tag"><span class="badge">✕</span> DON'T</div>
+        <h3>Open with a greeting.</h3>
+        <p>"Hey guys!" and "Happy Monday!" are invisible. The algorithm reads them. Humans don't.</p>
+        <div class="example">Hey everyone, hope you're having a great week!</div>
+      </div>
+      <div class="card do">
+        <div class="tag"><span class="badge">✓</span> DO</div>
+        <h3>Use line breaks like punctuation.</h3>
+        <p>One thought per line on mobile. Air is the secret ingredient that makes dense ideas feel readable.</p>
+        <div class="example">It's not the idea.<br/>It's the delivery.<br/>Every time.</div>
+      </div>
+      <div class="card dont">
+        <div class="tag"><span class="badge">✕</span> DON'T</div>
+        <h3>Dump a wall of text.</h3>
+        <p>A 9-line paragraph collapses into a grey block on a phone. Readers see the shape and scroll past.</p>
+        <div class="example">A single unbroken paragraph that just goes on and on about what you do without ever stopping for the reader to breathe or care about the point you're making…</div>
+      </div>
+    </div>
+  </div>
+  <div class="page-footer">
+    <span>Part 01 · Finding your voice</span>
+    <span class="num">07</span>
+  </div>
+</section>
+
+<!-- =========================== PAGE 8 — SECTION DIVIDER 02 =========================== -->
+<section class="page dark" data-page="8" data-screen-label="08 Section 02">
+  <div class="page-header">
+    <div class="mark"><span>SMART</span><span class="slash">/</span><span>EDGE</span></div>
+    <span>Part Two</span>
+  </div>
+  <div class="page-body">
+    <div class="section-marker">
+      <div class="num">02</div>
+      <div>
+        <div class="eyebrow-lg">Part Two</div>
+        <h1>Visual identity.</h1>
+        <p class="desc">Pick your colors, pick your type, and commit. Inconsistency is invisible — consistency is memorable.</p>
+      </div>
+    </div>
+  </div>
+  <div class="page-footer">
+    <span>Part 02 · Visual identity</span>
+    <span class="num">08</span>
+  </div>
+</section>
+
+<!-- =========================== PAGE 9 — COLOR SYSTEM =========================== -->
+<section class="page" data-page="9" data-screen-label="09 Color">
+  <div class="page-header">
+    <div class="mark"><span>SMART</span><span class="slash">/</span><span>EDGE</span></div>
+    <span>04 · Color</span>
+  </div>
+  <div class="page-body">
+    <div class="eyebrow-lg">Rule 04 · Color</div>
+    <hr class="lime-rule"/>
+    <div class="title-block">
+      <h1>One palette. Used with discipline.</h1>
+      <p class="lede">Five colors, known roles. The accent is a scarcity token — if it appears more than twice per viewport, it stops working.</p>
+    </div>
+
+    <div class="swatch-grid">
+      <div class="swatch"><div class="chip" style="background:#1A1A1B;"></div><div class="name">Almost Black</div><div class="hex">#1A1A1B</div></div>
+      <div class="swatch"><div class="chip" style="background:#F9F8F3;"></div><div class="name">Creamy White</div><div class="hex">#F9F8F3</div></div>
+      <div class="swatch"><div class="chip" style="background:#0056B3;"></div><div class="name">Royal Azure</div><div class="hex">#0056B3</div></div>
+      <div class="swatch"><div class="chip" style="background:#CCFF00;"></div><div class="name">Cyber Lime</div><div class="hex">#CCFF00</div></div>
+      <div class="swatch"><div class="chip" style="background:#B19CD9;"></div><div class="name">Light Purple</div><div class="hex">#B19CD9</div></div>
+    </div>
+
+    <div class="stat-grid" style="margin-top:28px;">
+      <div class="stat">
+        <span class="label">Dark Ink</span>
+        <span class="figure">90%</span>
+        <span class="desc">Used on almost every surface — backgrounds, body text, footer.</span>
+      </div>
+      <div class="stat azure">
+        <span class="label">Secondary</span>
+        <span class="figure">8%</span>
+        <span class="desc">Azure for subheadings, links, and trust signals.</span>
+      </div>
+      <div class="stat lime">
+        <span class="label">Scarcity Accent</span>
+        <span class="figure">2%</span>
+        <span class="desc">Lime only on CTAs and one moment per layout.</span>
+      </div>
+    </div>
+
+    <div class="callout warn" style="margin-top:auto;">
+      <div class="icon">!</div>
+      <div>
+        <span class="label">Gradient rule</span>
+        <p>No gradients in default layouts. Flat cream or flat black — that's the brand.</p>
+      </div>
+    </div>
+  </div>
+  <div class="page-footer">
+    <span>Part 02 · Visual identity</span>
+    <span class="num">09</span>
+  </div>
+</section>
+
+<!-- =========================== PAGE 10 — TYPOGRAPHY =========================== -->
+<section class="page" data-page="10" data-screen-label="10 Type">
+  <div class="page-header">
+    <div class="mark"><span>SMART</span><span class="slash">/</span><span>EDGE</span></div>
+    <span>05 · Type</span>
+  </div>
+  <div class="page-body">
+    <div class="eyebrow-lg">Rule 05 · Typography</div>
+    <hr class="lime-rule"/>
+    <div class="title-block">
+      <h1>Type is the tone of voice, drawn.</h1>
+    </div>
+
+    <div class="type-specimen">
+      <div class="name">Display · Barlow Condensed</div>
+      <div class="sample-h">HEADLINES<br/>THAT HIT.</div>
+      <div class="meta">700–800 · Tracking -0.02em · Line-height 1.05</div>
+    </div>
+    <div class="type-specimen">
+      <div class="name">Body · Barlow</div>
+      <p class="sample-b">Barlow carries the long-form. Clean, humanist, low contrast. Set body at 15–17px with a line-height of 1.55. Keep measure under 64 characters. This is where the idea lands.</p>
+      <div class="meta">400–600 · Max-width 64ch · Line-height 1.55</div>
+    </div>
+    <div class="type-specimen">
+      <div class="name">Mono · JetBrains Mono</div>
+      <p class="sample-b" style="font-family:var(--font-mono);font-size:14px;">01 / metric_readout &nbsp; 2,847% &nbsp; · &nbsp; conversion_rate</p>
+      <div class="meta">Used for metrics, code, and /-accent lockups</div>
+    </div>
+
+    <div class="callout tip" style="margin-top:20px;">
+      <div class="icon">Aa</div>
+      <div>
+        <span class="label">The tracking rule</span>
+        <p>Headings: tight (-0.02em). Body: normal. Eyebrows: wide (+0.18em). This contrast is what makes the system feel engineered.</p>
+      </div>
+    </div>
+  </div>
+  <div class="page-footer">
+    <span>Part 02 · Visual identity</span>
+    <span class="num">10</span>
+  </div>
+</section>
+
+<!-- =========================== PAGE 11 — PLATFORM MATRIX =========================== -->
+<section class="page" data-page="11" data-screen-label="11 Platform Specs">
+  <div class="page-header">
+    <div class="mark"><span>SMART</span><span class="slash">/</span><span>EDGE</span></div>
+    <span>06 · Specs</span>
+  </div>
+  <div class="page-body">
+    <div class="eyebrow-lg">Rule 06 · Platform Specs</div>
+    <hr class="lime-rule"/>
+    <div class="title-block">
+      <h1>Format for where it lives.</h1>
+      <p class="lede">Same post, four different crops. The platform never adapts to you — you adapt to the platform.</p>
+    </div>
+
+    <div class="matrix">
+      <div class="hh">Platform</div>
+      <div class="hh">Ratio</div>
+      <div class="hh">Pixel Size</div>
+      <div class="hh">Caption Max</div>
+      <div class="hh">Hashtags</div>
+
+      <div class="rowlabel">Instagram Feed</div>
+      <div class="val">4:5</div>
+      <div class="val">1080 × 1350</div>
+      <div class="val">2,200 ch</div>
+      <div class="val good">3–5</div>
+
+      <div class="rowlabel">IG Story / Reel</div>
+      <div class="val">9:16</div>
+      <div class="val">1080 × 1920</div>
+      <div class="val">N/A</div>
+      <div class="val good">2–3</div>
+
+      <div class="rowlabel">LinkedIn</div>
+      <div class="val">1:1 or 4:5</div>
+      <div class="val">1200 × 1200</div>
+      <div class="val">3,000 ch</div>
+      <div class="val good">3</div>
+
+      <div class="rowlabel">TikTok</div>
+      <div class="val">9:16</div>
+      <div class="val">1080 × 1920</div>
+      <div class="val">4,000 ch</div>
+      <div class="val good">3–4</div>
+
+      <div class="rowlabel">X / Twitter</div>
+      <div class="val">16:9</div>
+      <div class="val">1600 × 900</div>
+      <div class="val">280 ch</div>
+      <div class="val good">1–2</div>
+
+      <div class="rowlabel">Pinterest</div>
+      <div class="val">2:3</div>
+      <div class="val">1000 × 1500</div>
+      <div class="val">500 ch</div>
+      <div class="val good">—</div>
+
+      <div class="rowlabel">YouTube Thumb</div>
+      <div class="val">16:9</div>
+      <div class="val">1280 × 720</div>
+      <div class="val">N/A</div>
+      <div class="val good">—</div>
+    </div>
+
+    <div class="callout note" style="margin-top:auto;">
+      <div class="icon">i</div>
+      <div>
+        <span class="label">Master format</span>
+        <p>Design once at 1080 × 1350. Crop up for feed, crop to 9:16 for vertical. Never design at the smallest size first.</p>
+      </div>
+    </div>
+  </div>
+  <div class="page-footer">
+    <span>Part 02 · Visual identity</span>
+    <span class="num">11</span>
+  </div>
+</section>
+
+<!-- =========================== PAGE 12 — ANNOTATED EXAMPLE =========================== -->
+<section class="page" data-page="12" data-screen-label="12 Annotated">
+  <div class="page-header">
+    <div class="mark"><span>SMART</span><span class="slash">/</span><span>EDGE</span></div>
+    <span>07 · Teardown</span>
+  </div>
+  <div class="page-body">
+    <div class="eyebrow-lg">Teardown · Annotated Post</div>
+    <hr class="lime-rule"/>
+    <div class="title-block">
+      <h1>A good post, dissected.</h1>
+      <p class="lede">Six details that do 80% of the heavy lifting. Steal any of them.</p>
+    </div>
+
+    <div class="mockup" style="max-width: 300px; margin-left: 0;">
+      <div class="post-header">
+        <div class="avatar"></div>
+        <div style="min-width:0;flex:1;">
+          <div class="name" style="white-space:nowrap;">SMART/EDGE</div>
+          <div class="handle">@smartedge · 3h</div>
+        </div>
+      </div>
+      <div class="post-image">[ PRIMARY IMAGE — 4:3 ]</div>
+      <div class="caption-text"><strong>Stop designing for likes. Start designing for clicks.</strong><br/><br/>Three things we changed on one client's landing page — and how it tripled demo bookings in 14 days. ↓</div>
+      <div class="hashtags">#design #conversion #webdesign</div>
+
+      <!-- annotations -->
+      <div class="annotation" style="top:12px;right:-180px;"><div class="dot">1</div><div class="txt">Branded avatar, always</div></div>
+      <div class="annotation" style="top:82px;right:-190px;"><div class="dot">2</div><div class="txt">Master ratio 4:3 or 4:5</div></div>
+      <div class="annotation" style="bottom:90px;right:-170px;"><div class="dot">3</div><div class="txt">Hook in first 7 words</div></div>
+      <div class="annotation" style="bottom:50px;right:-170px;"><div class="dot">4</div><div class="txt">Number + timeframe</div></div>
+      <div class="annotation" style="bottom:18px;right:-170px;"><div class="dot">5</div><div class="txt">3 hashtags max</div></div>
+      <div class="annotation" style="top:46px;right:-170px;"><div class="dot">6</div><div class="txt">Clear timestamp</div></div>
+    </div>
+  </div>
+  <div class="page-footer">
+    <span>Part 02 · Visual identity</span>
+    <span class="num">12</span>
+  </div>
+</section>
+
+<!-- =========================== PAGE 13 — STEPS: PUBLISH WORKFLOW =========================== -->
+<section class="page" data-page="13" data-screen-label="13 Workflow">
+  <div class="page-header">
+    <div class="mark"><span>SMART</span><span class="slash">/</span><span>EDGE</span></div>
+    <span>08 · Workflow</span>
+  </div>
+  <div class="page-body">
+    <div class="eyebrow-lg">Rule 07 · Workflow</div>
+    <hr class="lime-rule"/>
+    <div class="title-block">
+      <h1>The 5-step publishing rhythm.</h1>
+      <p class="lede">Same loop, every week. Systems beat sprints.</p>
+    </div>
+
+    <div class="steps">
+      <div class="step">
+        <div class="num">01</div>
+        <div>
+          <h3>Capture ideas continuously</h3>
+          <p>Keep one running note. Every good line you overhear, read, or think is raw material. You're not "out of ideas" — you're out of notes.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="num">02</div>
+        <div>
+          <h3>Draft in batches</h3>
+          <p>One sitting per week. Write five posts at once. Context-switching is the tax that kills consistency.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="num">03</div>
+        <div>
+          <h3>Design to the template</h3>
+          <p>Use pre-approved layouts. Don't reinvent the post. Your audience remembers the pattern, not the novelty.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="num">04</div>
+        <div>
+          <h3>Schedule, don't post live</h3>
+          <p>Post from a queue. Live posting turns creative work into compulsive work.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="num">05</div>
+        <div>
+          <h3>Review weekly, revise quarterly</h3>
+          <p>Log what hit. Every 12 weeks, delete what didn't. The guide is a document — not a monument.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page-footer">
+    <span>Part 03 · Habit & Workflow</span>
+    <span class="num">13</span>
+  </div>
+</section>
+
+<!-- =========================== PAGE 14 — CHECKLIST =========================== -->
+<section class="page dark" data-page="14" data-screen-label="14 Checklist">
+  <div class="page-header">
+    <div class="mark"><span>SMART</span><span class="slash">/</span><span>EDGE</span></div>
+    <span>09 · Checklist</span>
+  </div>
+  <div class="page-body">
+    <div class="eyebrow-lg">Pre-publish Checklist</div>
+    <hr class="lime-rule"/>
+    <div class="title-block">
+      <h1>7 boxes. Tick all of them.</h1>
+      <p class="lede">Run this before every post goes live. It takes 90 seconds and saves you from the ones you'd regret.</p>
+    </div>
+
+    <ul class="checklist">
+      <li><span class="check">✓</span><div><strong>Hook is in the first 7 words</strong><span>Promise something specific before the "…see more" cutoff.</span></div></li>
+      <li><span class="check">✓</span><div><strong>One idea per post</strong><span>If you can summarize in two sentences, you're doing it right. If not, cut.</span></div></li>
+      <li><span class="check">✓</span><div><strong>Caption has line breaks</strong><span>Every 1–2 sentences = new line. Mobile-first formatting only.</span></div></li>
+      <li><span class="check">✓</span><div><strong>CTA is singular & specific</strong><span>"Comment YES" or "Save this" — not "Let me know what you think!"</span></div></li>
+      <li><span class="check">✓</span><div><strong>Visual uses brand colors only</strong><span>Cream, black, azure. Lime on the CTA moment. That's it.</span></div></li>
+      <li><span class="check">✓</span><div><strong>Hashtags are 3–5, on brand</strong><span>Quality over quantity. One niche, one branded, one discovery.</span></div></li>
+      <li><span class="check">✓</span><div><strong>Scheduled — not posted live</strong><span>Queue it. Walk away. Live posting is creative suicide.</span></div></li>
+    </ul>
+  </div>
+  <div class="page-footer">
+    <span>Part 03 · Habit & Workflow</span>
+    <span class="num">14</span>
+  </div>
+</section>
+
+<!-- =========================== PAGE 15 — RESOURCES =========================== -->
+<section class="page" data-page="15" data-screen-label="15 Resources">
+  <div class="page-header">
+    <div class="mark"><span>SMART</span><span class="slash">/</span><span>EDGE</span></div>
+    <span>10 · Resources</span>
+  </div>
+  <div class="page-body">
+    <div class="eyebrow-lg">Keep Going</div>
+    <hr class="lime-rule"/>
+    <div class="title-block">
+      <h1>Templates, tools, & tips.</h1>
+      <p class="lede">The guide gets you started. These keep you sharp.</p>
+    </div>
+
+    <div class="icon-grid">
+      <div class="icon-tile">
+        <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+        <h4>Post Templates</h4>
+        <p>Pre-approved layouts for feed, story, carousel. Design once, publish forever.</p>
+      </div>
+      <div class="icon-tile">
+        <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg></div>
+        <h4>Asset Library</h4>
+        <p>Logos, fonts, brand colors as swatches. Everything you need to stay consistent.</p>
+      </div>
+      <div class="icon-tile">
+        <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 14 4-4 4 4 5-5"/></svg></div>
+        <h4>Metrics Tracker</h4>
+        <p>A single spreadsheet. Five numbers. Review weekly. That's the whole system.</p>
+      </div>
+      <div class="icon-tile">
+        <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 1 1 3 3L7 19l-4 1 1-4z"/></svg></div>
+        <h4>Caption Swipe File</h4>
+        <p>100+ proven hooks, organized by intent. Never stare at a blinking cursor.</p>
+      </div>
+      <div class="icon-tile">
+        <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <h4>Posting Cadence</h4>
+        <p>Weekly rhythm templates for IG, LinkedIn, TikTok. Copy, paste, commit.</p>
+      </div>
+      <div class="icon-tile">
+        <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></div>
+        <h4>1:1 Feedback</h4>
+        <p>Book a 30-min review. We'll tear down your last five posts — and show you what to fix.</p>
+      </div>
+    </div>
+
+    <div class="takeaway">
+      <div class="bolt">⚡</div>
+      <div>
+        <div class="label">Parting shot</div>
+        <p>You're not running out of ideas. You're running out of reps. Ship. Measure. Ship again.</p>
+      </div>
+    </div>
+  </div>
+  <div class="page-footer">
+    <span>Closing · Resources</span>
+    <span class="num">15</span>
+  </div>
+</section>
+
+<!-- =========================== PAGE 16 — BACK COVER =========================== -->
+<section class="page dark final" data-page="16" data-screen-label="16 Back Cover">
+  <div class="page-header">
+    <div class="mark"><span>SMART</span><span class="slash">/</span><span>EDGE</span></div>
+    <span>End</span>
+  </div>
+  <div class="final-body">
+    <div>
+      <div class="eyebrow-lg" style="color:var(--se-lime);">Thanks for reading</div>
+      <h1>NOW GO<br/>MAKE IT<br/><span class="slash">/</span>CLICK.</h1>
+      <p class="subline">You have the rules. You have the templates. The only thing left is the reps. If you want a second pair of eyes on your first ten posts, we're here.</p>
+    </div>
+    <div>
+      <div class="final-contact">
+        <div class="block">
+          <div class="lbl">Website</div>
+          <div class="v">smartedge.studio</div>
+        </div>
+        <div class="block">
+          <div class="lbl">Email</div>
+          <div class="v">hello@smartedge.studio</div>
+        </div>
+        <div class="block">
+          <div class="lbl">Instagram</div>
+          <div class="v">@smartedge.studio</div>
+        </div>
+        <div class="block">
+          <div class="lbl">LinkedIn</div>
+          <div class="v">/smartedge-studio</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page-footer">
+    <span>© 2026 SMART/EDGE · Where great design clicks.</span>
+    <span class="num">16</span>
+  </div>
+</section>
+
+</main>
+
+<script>
+// Tweaks state
+const TWEAKS = /*EDITMODE-BEGIN*/{
+  "accent": "heavy",
+  "cover": "c"
+}/*EDITMODE-END*/;
+
+function applyTweaks() {
+  const a = document.getElementById('tw-accent').value;
+  const c = document.getElementById('tw-cover').value;
+  document.body.dataset.accent = a;
+  document.body.dataset.cover = c;
+
+  const cover = document.querySelector('.cover');
+  const coverBody = cover.querySelector('.cover-body');
+  if (c === 'a') {
+    cover.style.background = '#1A1A1B';
+    cover.style.color = '#F9F8F3';
+  } else if (c === 'b') {
+    cover.style.background = '#CCFF00';
+    cover.style.color = '#1A1A1B';
+    cover.querySelector('.cover-title').style.color = '#1A1A1B';
+    cover.querySelector('.cover-sub').style.color = '#1A1A1B';
+    cover.querySelector('.cover-kicker').style.color = '#1A1A1B';
+    cover.querySelectorAll('.cover-deco')[0].style.borderColor = '#1A1A1B';
+    cover.querySelectorAll('.cover-deco')[0].style.color = '#1A1A1B';
+  } else if (c === 'c') {
+    cover.style.background = '#F9F8F3';
+    cover.style.color = '#1A1A1B';
+    cover.querySelector('.cover-title').style.color = '#1A1A1B';
+    cover.querySelector('.cover-sub').style.color = '#3D3D40';
+    cover.querySelector('.cover-kicker').style.color = '#0056B3';
+  }
+
+  window.parent.postMessage({type:'__edit_mode_set_keys', edits: {accent: a, cover: c}}, '*');
+}
+
+// Edit-mode protocol
+window.addEventListener('message', (e) => {
+  if (e.data?.type === '__activate_edit_mode') document.getElementById('tweaks').classList.add('open');
+  if (e.data?.type === '__deactivate_edit_mode') document.getElementById('tweaks').classList.remove('open');
+});
+window.parent.postMessage({type:'__edit_mode_available'}, '*');
+
+// Hydrate tweaks from stored state
+document.getElementById('tw-accent').value = TWEAKS.accent;
+document.getElementById('tw-cover').value = TWEAKS.cover;
+if (TWEAKS.cover !== 'a') applyTweaks();
+</script>
+
+</body>
+</html>

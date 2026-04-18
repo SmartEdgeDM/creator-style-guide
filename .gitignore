@@ -1,0 +1,26 @@
+# Windows
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# macOS (in case you ever work cross-platform)
+.DS_Store
+
+# Editor folders
+.vscode/
+.idea/
+
+# Backup files
+*.backup
+*.bak
+*~
+
+# Logs
+*.log
+
+# OS-generated
+ehthumbs.db
+Icon?
+
+# Dependency folders (in case you add tooling later)
+node_modules/
