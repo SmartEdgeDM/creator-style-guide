@@ -8,7 +8,9 @@ A 16-page guide covering brand colors, typography, voice and tone, layout rules,
 
 ## Viewing the guide
 
-Open `index.html` in any modern browser. No build step, no dependencies.
+**Live version:** https://smartedgedm.github.io/creator-style-guide/
+
+Or open `index.html` locally in any modern browser. No build step, no dependencies.
 
 ## Project structure
 creator-style-guide/
