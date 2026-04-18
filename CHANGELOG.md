@@ -16,6 +16,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Live URL reference in README
 - `LICENSE` file with CC BY-NC-ND 4.0 terms
 - License section in README
+- README preview image at top of file
+- Social preview image for shared links
 
 ### Changed
 - Split embedded CSS from `index.html` into external `brand.css` and `guide.css` files for reusability across future SMART/EDGE projects

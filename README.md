@@ -1,3 +1,5 @@
+![SMART/EDGE Creator Style Guide cover](assets/preview.png)
+
 # Creator Style Guide
 
 A digital style and formatting guide for SMART/EDGE content creators. Print-ready (US Letter) and scrollable on screen.
